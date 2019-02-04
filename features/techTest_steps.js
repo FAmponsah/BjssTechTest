@@ -52,7 +52,7 @@ When('I send this request to {string}', async function (url) {
   });
 });
 
-Then('the blue, red, and green button ids should change after I have clicked the start button', async function () {
+Then('the blue, red, and green button ids should change after I have clicked on the red button', async function () {
   let blueButtonIdBeforeClick = await this.driver.findElement(By.xpath(locators.BLUE_BUTTON_XPATH)).getAttribute('id');
   let redButtonIdBeforeClick = await this.driver.findElement(By.xpath(locators.RED_BUTTON_XPATH)).getAttribute('id');
   let greenButtonIdBeforeClick = await this.driver.findElement(By.xpath(locators.GREEN_BUTTON_XPATH)).getAttribute('id');
