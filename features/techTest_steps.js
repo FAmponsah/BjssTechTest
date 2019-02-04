@@ -1,11 +1,9 @@
 const assert = require('chai').assert;
 const { Given, When, Then } = require('cucumber');
 const { By, until } = require('selenium-webdriver');
-const World = require('./support/world');
+const api = require('./support/api');
 const locators = require('./locators');
-const axios = require('axios');
 
-this.World = World;
 let apiResponse = '';
 
 Given('I have navigated to {string}', async function (herokuAppUrl) {
@@ -37,19 +35,7 @@ When('I click on the {string}', async function (linkOrButtonText) {
 });
 
 When('I send this request to {string}', async function (url) {
-  apiResponse = await axios.get(url, {
-    params: {
-      'name': this.dataString.name,
-      'age': this.dataString.age,
-      'salary': this.dataString.salary
-    }
-  })
-  .then(function (response) {
-    return response;
-  })
-  .catch(function (error) {
-    throw new Error('An error occured whilst trying to create a new user.');
-  });
+  apiResponse = await api.createUser(url, this.dataString);
 });
 
 Then('the blue, red, and green button ids should change after I have clicked on the red button', async function () {
