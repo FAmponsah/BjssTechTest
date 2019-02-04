@@ -5,7 +5,7 @@ Feature: Short Technical Test Solution
 Scenario: As a web user I should be able to click on the Challenging DOM link
   Given I have navigated to 'https://the-internet.herokuapp.com/'
   When I click on the 'Challenging DOM link'
-  Then the blue, red, and green button ids should change
+  Then the blue, red, and green button ids should change after I have clicked the start button
 
 @confirmhelloworldisdisplayed
 Scenario:  As a web user I should see Hello World! displayed after the loading bar has disappeared
