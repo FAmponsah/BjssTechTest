@@ -1,0 +1,20 @@
+{
+  "name": "bjss-tech-test",
+  "version": "1.0.0",
+  "description": "short tech test solutions",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cucumber": "^5.1.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test-chrome": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\""
+  },
+  "author": "",
+  "license": "ISC"
+}
